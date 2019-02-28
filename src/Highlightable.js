@@ -1,7 +1,7 @@
 import emojiRegex from 'emoji-regex';
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-
+import { isEqual } from 'lodash';
 
 import EmojiNode from './nodes/EmojiNode';
 import Node from './nodes/Node';
@@ -17,7 +17,7 @@ export default class Highlightable extends Component {
   }
 
   shouldComponentUpdate(newProps) {
-    return newProps.ranges.length !== this.props.ranges.length
+    return !isEqual(newProps.ranges, this.props.ranges)
             || newProps.text !== this.props.text
             || newProps.enabled !== this.props.enabled;
   }
