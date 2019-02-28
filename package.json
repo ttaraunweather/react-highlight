@@ -2,7 +2,7 @@
   "name": "highlightable",
   "version": "1.0.6",
   "description": "Component that help highlighting text",
-  "main": "lib/Highlightable.min.js",
+  "main": "src/Highlightable.js",
   "scripts": {
     "build": "webpack --env.mode=build",
     "dev": "webpack --progress --colors --watch --mode=dev",
